@@ -1,0 +1,10 @@
+services:
+  portainer-agent:
+    image: portainer/agent:2.33.2
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/volumes:/var/lib/docker/volumes
+      - /:/host
+    ports:
+      - 900:9001
