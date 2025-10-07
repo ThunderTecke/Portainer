@@ -1,0 +1,90 @@
+# ==========================================
+# 📦 DOCKER / COMPOSE STACK GITIGNORE
+# ==========================================
+
+# 🔐 Environnements et secrets
+.env
+.env.*
+*.env.backup
+secrets/
+!secrets/*.template       # garde les modèles de secrets (ex: secret.example)
+
+# 🔄 Volumes et données persistantes
+data/
+redis/
+media/
+db/
+postgres/
+mysql/
+mariadb/
+config/
+cache/
+tmp/
+__pycache__/
+
+# 🔊 Logs
+*.log
+*.log.*
+log/
+logs/
+*.err
+*.out
+
+# 🧰 Caddy / Nginx / Traefik runtime data
+caddy/data/
+caddy/config/
+acme.json
+
+# 💾 Bases de données
+*.db
+*.sqlite*
+*.sql
+*.bak
+*.dump
+
+# 🧱 Ignition / SCADA
+ignition/data/
+ignition-db-data/
+backup.gwbk
+*.modl
+*.idb
+
+# 💡 Certificats SSL (jamais dans Git)
+*.crt
+*.pem
+*.key
+*.csr
+*.pfx
+*.cer
+*.der
+
+# ⚙️ Docker
+docker-compose.override.yml
+docker-compose.*.bak
+docker-compose.*.local.yml
+docker-compose.override.yaml
+docker-compose.*.backup.yml
+
+# 🧍 Portainer / Metadata
+.portainer/
+portainer_data/
+portainer-agent_data/
+
+# ⚙️ IDE & système
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+*.lock
+*.old
+
+# Node / Python / Build
+node_modules/
+dist/
+build/
+*.egg-info/
+
