@@ -7,8 +7,6 @@ services:
       - portainer_data:/data 
     networks:
       - proxy_net
-    environment:
-      - TRUSTED_ORIGINS=http://portainer.dome-iq.net
 
 volumes:
   portainer_data:
